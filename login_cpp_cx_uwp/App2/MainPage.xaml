@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="855.007" d:DesignHeight="500.65">
+
+
+            <Grid Width="360" Height="180">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="lbl_user" Grid.Column="0" Text="User" FontSize="20" VerticalAlignment="Center" Margin="10,0,0,0" HorizontalAlignment="Stretch" FontWeight="Bold"/>
+                    <TextBox x:Name="tb_user" Grid.Column="1" BorderThickness="2" Text="kage" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="lbl_pwd" Text="Password" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="10,0,0,0" FontWeight="Bold"/>
+                    <PasswordBox x:Name="tb_pwd" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="20" Password="secret"/>
+
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="lbl_status" Text="Server: online" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF04A500" FontSize="20"/>
+                    <Button x:Name="btn_login" Content="Login" Grid.Column="1" HorizontalAlignment="Stretch" FontSize="20" Margin="10,0,10,0" Click="Btn_login_Click"/>
+                </Grid>
+
+
+    </Grid>
+</Page>
